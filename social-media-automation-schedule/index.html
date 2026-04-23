@@ -5,35 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Campus Closet Social Media Automation Schedule</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f7fafc; color: #1f2937; }
-    .wrap { max-width: 900px; margin: 32px auto; padding: 0 16px; }
-    .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; }
-    h1 { margin-top: 0; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border-bottom: 1px solid #e5e7eb; text-align: left; padding: 10px; }
-    th { background: #f0fdfa; }
-    .muted { color: #6b7280; font-size: 14px; }
+    :root { --bg:#f8fafc; --card:#ffffff; --line:#e5e7eb; --text:#111827; --muted:#6b7280; --accent:#0f766e; }
+    body { margin:0; font-family: Arial, sans-serif; background:var(--bg); color:var(--text); }
+    .wrap { max-width: 1180px; margin: 28px auto; padding: 0 16px 40px; }
+    .card { background: var(--card); border:1px solid var(--line); border-radius: 12px; padding: 18px; }
+    h1 { margin: 0 0 8px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .legend { margin-top: 10px; font-size: 13px; color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 14px; }
+    th, td { border:1px solid var(--line); padding: 10px; vertical-align: top; }
+    th { background:#ecfeff; text-align:left; }
+    .day { white-space: nowrap; font-weight: bold; }
+    .time { white-space: nowrap; color:#0f172a; }
+    .note { margin-top: 14px; font-size: 13px; color: var(--muted); }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>Social Media Automation Schedule</h1>
-      <p class="muted">Campus Closet | Timezone: America/Chicago (Central Time)</p>
+      <h1>Campus Closet Social Media Automation Schedule</h1>
+      <div class="muted">Timezone: America/Chicago (Central Time) | Updated: 2026-04-23</div>
+      <div class="legend">Platforms used: Instagram, TikTok, Snapchat, Reddit</div>
+
       <table>
         <thead>
-          <tr><th>Day</th><th>Time</th><th>Automation Output</th></tr>
+          <tr>
+            <th>Day</th>
+            <th>Timestamp (CT)</th>
+            <th>Instagram (How Used)</th>
+            <th>TikTok (How Used)</th>
+            <th>Snapchat (How Used)</th>
+            <th>Reddit (How Used)</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Monday</td><td>9:00 AM</td><td>Generate full weekly content batch (IG + TikTok + X captions)</td></tr>
-          <tr><td>Tuesday</td><td>11:30 AM</td><td>Publish "new listings" post</td></tr>
-          <tr><td>Wednesday</td><td>7:30 PM</td><td>Publish "event outfit inspiration" post</td></tr>
-          <tr><td>Thursday</td><td>12:00 PM</td><td>Publish "campus trend / user spotlight" post</td></tr>
-          <tr><td>Friday</td><td>4:30 PM</td><td>Publish "weekend event + CTA" post</td></tr>
-          <tr><td>Sunday</td><td>6:00 PM</td><td>Generate next week draft + performance recap</td></tr>
+          <tr>
+            <td class="day">Monday</td>
+            <td class="time">9:00 AM</td>
+            <td>Auto-generate and schedule 7 feed captions + 7 Story prompts for the week.</td>
+            <td>Auto-generate 7 short-form hooks and shot lists for weekly posting.</td>
+            <td>Auto-generate 3 Story text templates for event-week urgency.</td>
+            <td>Draft weekly post copy for campus and sorority-related communities.</td>
+          </tr>
+          <tr>
+            <td class="day">Tuesday</td>
+            <td class="time">11:30 AM</td>
+            <td>Publish "New Listings Drop" carousel with CTA to message sellers.</td>
+            <td>Publish "3 listings under budget" video with strong opening hook.</td>
+            <td>Story blast: "New dresses live today" with swipe-up link.</td>
+            <td>Post listings highlight thread with top 3 categories + link.</td>
+          </tr>
+          <tr>
+            <td class="day">Wednesday</td>
+            <td class="time">7:30 PM</td>
+            <td>Publish "Event Outfit Inspiration" reel featuring real listing photos.</td>
+            <td>Publish style-match video for upcoming campus events.</td>
+            <td>Behind-the-scenes Story: "How to pick your event look fast."</td>
+            <td>Mid-week engagement question: "What event are you shopping for?"</td>
+          </tr>
+          <tr>
+            <td class="day">Thursday</td>
+            <td class="time">12:00 PM</td>
+            <td>Publish user spotlight + testimonial card for trust building.</td>
+            <td>Publish quick social-proof clip (happy buyer/seller moment).</td>
+            <td>Story poll: "Rent or buy this weekend?" to drive interaction.</td>
+            <td>Community post with feedback request and feature updates.</td>
+          </tr>
+          <tr>
+            <td class="day">Friday</td>
+            <td class="time">4:30 PM</td>
+            <td>Publish "Weekend Event CTA" post to push last-minute demand.</td>
+            <td>Publish urgency video: "Need a dress by tonight?"</td>
+            <td>Countdown Story sequence for Friday/Saturday events.</td>
+            <td>Weekend thread: available listings + fast-response sellers.</td>
+          </tr>
+          <tr>
+            <td class="day">Sunday</td>
+            <td class="time">6:00 PM</td>
+            <td>Automation compiles weekly performance and drafts next week plan.</td>
+            <td>Automation flags top-performing hook formats for reuse.</td>
+            <td>Automation summarizes Story tap-through performance.</td>
+            <td>Automation summarizes comment themes and demand signals.</td>
+          </tr>
         </tbody>
       </table>
-      <p class="muted">Updated: 2026-04-23</p>
+
+      <div class="note">Execution model: Monday/Sunday are planning automations; Tuesday-Friday are publish automations. This gives live evidence of scheduled workflow plus measurable outputs.</div>
     </div>
   </div>
 </body>
